@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -184,6 +187,23 @@
         <div class="projects-grid">
             <!-- Loop through the project data -->
             <div class="project-card">
+                <div class="web-project-demo">
+                    <img src="assets/images/dev_folio.png" alt="Dev-Folio">
+                </div>
+                <div class="project-info">
+                    <h3>Dev-Folio</h3>
+                    <p><strong>Tech Stack:</strong> HTML, CSS, JS</p>
+                    <p style="color:#7e7d7d">Built a portfolio website using AI tools without web development expertise.
+                    </p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/PatelPruthvi/patelpruthvi.github.io" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <div class="project-demo">
                     <img src="assets/projects/task_planner/task_planner_a.png" alt="App Demo Screen 1">
                     <img src="assets/projects/task_planner/task_planner_b.png" alt="App Demo Screen 2">
@@ -191,7 +211,8 @@
                 <div class="project-info">
                     <h3>Task Planner</h3>
                     <p><strong>Tech Stack:</strong> Flutter, SQLite, BLoC</p>
-                    <p>🚀 Stay on top of your tasks effortlessly with our intuitive task planner app! Organize,
+                    <p style="color:#7e7d7d">🚀 Stay on top of your tasks effortlessly with our intuitive task planner
+                        app! Organize,
                         prioritize, and conquer your day with ease. 📅✅</p>
                     <div class="project-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.agevole.taskplanner" target="_blank"
@@ -213,9 +234,10 @@
                 <div class="project-info">
                     <h3>Interactify</h3>
                     <p><strong>Tech Stack:</strong> Flutter, Cloud Firestore, BLoC</p>
-                    <p>Capture, share, and connect with the world. Visual stories, one's way. 📸🌍 #InstaClone</p>
+                    <p style="color:#7e7d7d">Capture, share, and connect with the world. Visual stories, one's way. 📸🌍
+                        #InstaClone</p>
                     <div class="project-buttons">
-                        <a href="interactify.apk" download class="btn apk-btn">
+                        <a href="assets/projects/interactify/interactify.apk" download class="btn apk-btn">
                             <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
                         </a>
                         <a href="https://github.com/PatelPruthvi/interactify" target="_blank" class="btn source-btn">
@@ -233,34 +255,13 @@
                 <div class="project-info">
                     <h3>Book Bucket</h3>
                     <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
-                    <p>Dive into a world of literature. Organize, discover, and embrace the reading journey with Book
-                        Bucket.</p>
+                    <p style="color:#7e7d7d">Dive into a world of literature. Organize, discover, and embrace the
+                        reading journey with Book Bucket.</p>
                     <div class="project-buttons">
-                        <a href="book_bucket.apk" download class="btn apk-btn">
+                        <a href="assets/projects/book_bucket/book-bucket.apk" download class="btn apk-btn">
                             <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
                         </a>
                         <a href="https://github.com/PatelPruthvi/book-Bucket-" target="_blank" class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/attendagram/attendagram.png" alt="Attendagram Demo Screen 1">
-                    <img src="assets/projects/attendagram/attendagram_2.png" alt="Attendagram Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Attendagram</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, Firebase, Cloud Firestore</p>
-                    <p>Streamline attendance tracking effortlessly. Simplify record-keeping for a seamless experience.
-                    </p>
-                    <div class="project-buttons">
-                        <a href="app_debug.apk" target="_blank" class="btn apk-btn">
-                            <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/AttendaGram_firestore" target="_blank"
-                            class="btn source-btn">
                             <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
                         </a>
                     </div>
@@ -274,9 +275,10 @@
                 <div class="project-info">
                     <h3>Grocery App</h3>
                     <p><strong>Tech Stack:</strong> Flutter, BLoC</p>
-                    <p>Mastering BLoC concepts one cart at a time. Explore the grocery app journey in 3 pages. 🛒📚</p>
+                    <p style="color:#7e7d7d">Mastering BLoC concepts one cart at a time. Explore the grocery app journey
+                        in 3 pages. 🛒📚</p>
                     <div class="project-buttons">
-                        <a href="grocery_app.apk" download class="btn apk-btn">
+                        <a href="assets/projects/grocery_app/grocery_app.apk" download class="btn apk-btn">
                             <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
                         </a>
                         <a href="https://github.com/PatelPruthvi/grocery_app_bloc" target="_blank"
@@ -295,12 +297,9 @@
                 <div class="project-info">
                     <h3>Cricbuzz Clone</h3>
                     <p><strong>Tech Stack:</strong> Flutter, API</p>
-                    <p>Live cricket buzz at your fingertips with Cricbuzz Clone 🏏📱</p>
+                    <p style="color:#7e7d7d">Live cricket buzz at your fingertips with Cricbuzz Clone 🏏📱</p>
                     <div class="project-buttons">
-                        <a href="cricbuzz_clone.apk" download class="btn apk-btn">
-                            <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/cricbuzz_clone" target="_blank" class="btn source-btn">
+                        <a href="https://github.com/PatelPruthvi/cricbuzz_clone" target="_blank" class="btn">
                             <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
                         </a>
                     </div>
@@ -317,9 +316,19 @@
             <!-- Form Section -->
             <div class="form-container">
                 <form id="contactForm">
-                    <input type="text" id="name" placeholder="Enter Your Name">
-                    <input type="email" id="email" placeholder="Enter Your E-mail">
-                    <textarea id="message" rows="6" placeholder="Enter Your Message"></textarea>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Enter Your Name" class="form-input" required
+                            data-error>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Enter Your E-mail" class="form-input" required
+                            data-error="Email cannot be empty.">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="6" placeholder="Enter Your Message" class="form-input" required
+                            data-error></textarea>
+
+                    </div>
                     <button type="submit" id="sendMessage">Send</button>
                 </form>
             </div>
