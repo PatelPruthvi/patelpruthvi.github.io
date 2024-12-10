@@ -1,58 +1,3 @@
-// particlesJS('particles-js', {
-//     particles: {
-//         number: { value: 130, density: { enable: true, value_area: 1000 } },
-//         color: { value: "#ffffff" },
-//         shape: { type: "circle" },
-//         opacity: { value: 0.4, random: true },
-//         size: { value: 6, random: true, anim: { enable: true, speed: 5, size_min: 3, sync: false } }, // Pulsing effect
-//         line_linked: { enable: true, distance: 120, color: "#808080", opacity: 0.5, width: 3 },
-//         move: {
-//             enable: true,
-//             speed: 2,
-//             direction: "none",
-//             random: false,
-//             straight: false,
-//             out_mode: "out",
-//             bounce: false,
-//             attract: { enable: false } // Ensures gravity effect only activates on drag
-//         }
-//     },
-//     interactivity: {
-//         detect_on: "canvas",
-//         events: {
-//             onhover: {
-//                 enable: true,
-//                 mode: "grab" // Particles "grab" towards the cursor, appearing to attract
-//             },
-//             onclick: {
-//                 enable: true,
-//                 mode: "push" // Particles are pushed and briefly change color on click
-//             },
-//             onmousemove: {
-//                 enable: true,
-//                 mode: "attract" // Creates a gravity-like attraction on drag
-//             }
-//         },
-//         modes: {
-//             grab: {
-//                 distance: 200,
-//                 line_linked: { opacity: 0.2 } // Increases link opacity when hovering to simulate attraction
-//             },
-//             push: {
-//                 particles_nb: 5, // Adds 5 particles on each click
-//                 color: "#FF6347" // Changes color of new particles briefly on click
-//             },
-//             attract: {
-//                 distance: 300,
-//                 duration: 0.5, // Strong gravity effect on drag
-//                 rotateX: 3000, // Adds a spin effect around X-axis for orbit effect
-//                 rotateY: 3000 // Adds a spin effect around Y-axis for orbit effect
-//             }
-//         }
-//     },
-//     retina_detect: true
-// });
-
 particlesJS('particles-js', {
     particles: {
         number: {
@@ -161,70 +106,88 @@ function changeEmoji(event) {
     scrollToSection(event, "#home");
 }
 
-// function handleContactForm() {
-const form = document.getElementById('contactForm');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-
-const nameError = document.getElementById('nameError');
-const emailError = document.getElementById('emailError');
-const messageError = document.getElementById('messageError');
-
-document.getElementById('sendMessage').addEventListener('click', (event) => {
+document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault();
+    const form = this;
 
-    // Clear existing errors
-    nameError.textContent = '';
-    emailError.textContent = '';
-    messageError.textContent = '';
-
-    // Validate inputs
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
-
-    let isValid = true;
-
-    if (!name) {
-        nameError.textContent = 'Name is required.';
-        isValid = false;
-    }
-
-    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
-        emailError.textContent = 'A valid email is required.';
-        isValid = false;
-    }
-
-    if (!message) {
-        messageError.textContent = 'Message cannot be empty.';
-        isValid = false;
-    }
-
-    // Submit if valid
-    if (isValid) {
-        fetch('https://example-mail-service.com/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                    form.reset();
-                } else {
-                    alert('Failed to send message. Please try again later.');
-                }
-            })
-            .catch((error) => {
-                console.error('Error sending message:', error);
-                alert('An error occurred. Please try again.');
-            });
+    if (form.checkValidity()) {
+        // If the form is valid, proceed with email sending
+        sendEmail();
     }
 });
-// }
+
+function validateName() {
+    const name = document.getElementById("name").value;
+
+    if (name.trim() === "") {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validateEmail() {
+    const email = document.getElementById("email").value;
+
+    if (email.trim() === "") {
+        return false;
+    }
+    else if (!validateEmailFormat(email)) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+function validateEmailFormat(email) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
+
+function validateMessage() {
+    const message = document.getElementById("message").value;
+    if (message.trim() === "") {
+        return false;
+    } else {
+        return true;
+    }
+}
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": true,
+    "positionClass": "toast-top-center",  // Position the toast at the top-center
+    "preventDuplicates": true,
+    "showDuration": "300",  // Toast show duration in milliseconds
+    "hideDuration": "1000",  // Toast hide duration in milliseconds
+    "timeOut": "5000",  // How long the toast stays visible (in milliseconds)
+    "extendedTimeOut": "1000"  // How long after the user hovers before the toast disappears
+};
+function sendEmail() {
+
+    emailjs.init("FreNCnKw2jdF8hImx");
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message
+    };
+    emailjs.send('service_cjp6w3d', 'template_k5cuubd', templateParams)
+        .then(function (response) {
+            alert("Message sent successfully!");
+            console.log('Success:', response);
+        }, function (error) {
+            alert("There was an error sending your message. Please try again.");
+            console.log('Error:', error);
+        });
+    document.getElementById("name").value = '';
+    document.getElementById("email").value = '';
+    document.getElementById("message").value = '';
+}
 
 
 var typed = new Typed(".typing", {

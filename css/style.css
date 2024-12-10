@@ -225,6 +225,22 @@ h2 {
 
 }
 
+.web-project-demo {
+    gap: 1em;
+    justify-items: center;
+    align-items: center;
+    padding: 1em;
+
+}
+
+.web-project-demo img {
+    max-width: 100%;
+    height: 320px;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -251,7 +267,7 @@ h2 {
 
 .project-info p {
     font-size: 0.9em;
-    color: #666;
+    color: #ffffff;
     margin: 0.5em 0;
 }
 
@@ -354,7 +370,7 @@ section {
 /* Left Section: Profile Card */
 .profile-card {
     flex: 1;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: #333;
     padding: 30px;
     border-radius: 20px;
     min-width: 30%;
@@ -374,7 +390,7 @@ section {
     margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #fff;
+    border: 5px solid #00aaff;
 }
 
 .profile-image img {
@@ -386,6 +402,7 @@ section {
 .profile-card h3 {
     font-size: 1.8rem;
     margin-bottom: 5px;
+    border-radius: 10;
 }
 
 .profile-card p {
@@ -418,8 +435,8 @@ section {
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
-    color: #0072ff;
-    background: #ffffff;
+    color: #ffffff;
+    background: #00aaff;
     border-radius: 25px;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -428,6 +445,7 @@ section {
 
 .resume-button:hover {
     background: #ffffff;
+    color: #00aaff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
@@ -645,8 +663,6 @@ body {
 
 /* Contact section */
 .contact {
-    /* min-height: 100vh;
-    height: 100%; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -786,6 +802,19 @@ button:hover {
     cursor: pointer;
 }
 
+.form-input.error+.error-info {
+    display: block;
+}
+
+.form-input:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #00aaff;
+}
 
 footer {
     margin: 10px 0;
