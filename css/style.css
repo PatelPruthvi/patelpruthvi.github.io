@@ -144,6 +144,41 @@ nav .menu-icon {
     z-index: 1;
 }
 
+.animated-text span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+/* Vibration + Blue Color on Hover */
+.animated-text span:hover {
+    color: #00aaff;
+    /* Bright blue */
+    animation: hoverPopGlow 0.6s ease-in-out;
+}
+
+@keyframes hoverPopGlow {
+    0% {
+        transform: scale(1);
+        text-shadow: none;
+    }
+
+    30% {
+        transform: scale(1.4);
+        text-shadow: 0 0 8px #00aaff;
+    }
+
+    60% {
+        transform: scale(0.95);
+        text-shadow: 0 0 12px #00aaff;
+    }
+
+    100% {
+        transform: scale(1.2);
+        text-shadow: 0 0 10px #00aaff;
+    }
+}
+
 .home-content {
     position: relative;
     z-index: 2;
