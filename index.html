@@ -4,7 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pruthvi's Portfolio</title>
+    <!-- Primary Meta Tags -->
+    <title>Pruthvi Patel | Flutter Developer Portfolio</title>
+    <meta name="description"
+        content="Pruthvi Patel - Flutter Developer portfolio showcasing mobile apps, Firebase projects, skills, and resume.">
+    <meta name="keywords"
+        content="Pruthvi Patel, Flutter Developer, Mobile App Developer, Portfolio, Firebase, Dart, BLoC, Cross-platform apps">
+    <meta name="author" content="Pruthvi Patel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://patelpruthvi.github.io">
+    <meta property="og:title" content="Pruthvi Patel | Flutter Developer Portfolio">
+    <meta property="og:description"
+        content="Explore the portfolio of Pruthvi Patel, Flutter Developer, showcasing cross-platform mobile apps, Firebase projects, and coding skills.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://x.com/_patelpruthvi_">
+    <meta name="twitter:title" content="Pruthvi Patel | Flutter Developer Portfolio">
+    <meta name="twitter:description"
+        content="Flutter Developer portfolio featuring apps, skills, and real-world projects by Pruthvi Patel.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+  {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pruthvi Patel",
+        "jobTitle": "Flutter Developer",
+        "url": "https://patelpruthvi.github.io",
+        "sameAs": [
+            "https://github.com/PatelPruthvi",
+            "https://linkedin.com/in/-patelpruthvi-"
+        ]
+    }
+  </script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -19,9 +57,10 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav>
-        <div class="logo" onclick="changeEmoji(event)">&lt;Pruthvi<span id="emoji">🧑‍💻</span>&gt;</div>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav aria-label="Main navigation">
+        <div class="logo" onclick="changeEmoji(event)" role="link" tabindex="0">&lt;Pruthvi<span
+                id="emoji">🧑‍💻</span>&gt;</div>
+        <div class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle menu">&#9776;</div>
         <ul class="nav-links">
             <li><a href="#home" onclick="scrollToSection(event, '#home')">Home</a></li>
             <li><a href="#about" onclick="scrollToSection(event, '#about-me')">About</a></li>
@@ -34,9 +73,10 @@
 
     <!-- Home Section with Particles -->
     <section class="home" id="home">
-        <div id="particles-js"></div>
+        <div id="particles-js" aria-hidden="true"></div>
         <div class="home-content">
-            <h1 class="animated-text"><span>H</span><span>e</span><span>l</span><span>l</span><span>o
+            <h1 class="animated-text" aria-label="Hello, I am Pruthvi Patel">
+                <span>H</span><span>e</span><span>l</span><span>l</span><span>o
                 </span>
                 <span> </span><span>👋</span><span>,</span>
                 <span> </span><span>I</span>
@@ -49,25 +89,30 @@
                 <span>P</span><span>a</span><span>t</span><span>e</span><span>l</span>
             </h2>
 
-            <h3 class="typewriter"><span class="typing"></span></h3>
+            <h3 class="typewriter"><span class="typing"
+                    aria-label="Frontend Developer | Flutter | Supabase | Open Source Enthusiast"></span></h3>
             <div>
-                <a href="https://leetcode.com/u/pruthvikp8613" class="home-icon" target="_blank">
+                <a href="https://leetcode.com/u/pruthvikp8613" class="home-icon" target="_blank" rel="noopener"
+                    aria-label="LeetCode Profile">
                     <i class="fas fa-code" style="font-size: 3.5em; margin-right: 10%;"></i>
                 </a>
-                <a href="https://x.com/_patelpruthvi_" class="home-icon" target="_blank">
+                <a href="https://x.com/_patelpruthvi_" class="home-icon" target="_blank" rel="noopener"
+                    aria-label="Twitter Profile">
                     <i class="fab fa-twitter" style="font-size: 3.5em; margin-right: 10%;"></i>
                 </a>
-                <a href="https://linkedin.com/in/-patelpruthvi-" class="home-icon" target="_blank">
+                <a href="https://linkedin.com/in/-patelpruthvi-" class="home-icon" target="_blank" rel="noopener"
+                    aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin" style="font-size: 3.5em; margin-right: 10%;"></i>
                 </a>
-                <a href="https://github.com/PatelPruthvi" class="home-icon" target="_blank">
+                <a href="https://github.com/PatelPruthvi" class="home-icon" target="_blank" rel="noopener"
+                    aria-label="Github Profile">
                     <i class="fab fa-github" style="font-size: 3.5em; margin-right: 10%;"></i>
                 </a>
             </div>
     </section>
 
     <!-- About Section -->
-    <section id="about-me" class="about-section">
+    <section id="about-me" class="about-section" aria-labelledby="about-heading">
         <h2>About Me</h2>
         <p class="intro">
             I am a <strong>Computer Engineering Graduate</strong> from CHARUSAT University with a
@@ -78,23 +123,28 @@
             <div class="about-content">
 
                 <ul class="about-details">
-                    <li><span>💻</span> Experienced Flutter Developer crafting efficient apps using BLoC & Firebase.
+                    <li><span aria-hidden="true">💻</span> Experienced Flutter Developer crafting efficient apps using
+                        BLoC & Firebase.
                     </li>
-                    <li><span>🧠</span> Competitive Coder sharpening skills on LeetCode.</li>
-                    <li><span>🌍</span> Adventurer exploring new places, gaming, and sports like volleyball & table
+                    <li><span aria-hidden="true">🧠</span> Competitive Coder sharpening skills on LeetCode.</li>
+                    <li><span aria-hidden="true">🌍</span> Adventurer exploring new places, gaming, and sports like
+                        volleyball & table
                         tennis.</li>
-                    <li><span>✨</span> Freelancing on diverse projects in my free time to gain real-world exposure.</li>
-                    <li><span>🌟</span> Committed to growth, innovation, and meaningful collaborations.</li>
+                    <li><span aria-hidden="true">✨</span> Freelancing on diverse projects in my free time to gain
+                        real-world exposure.</li>
+                    <li><span aria-hidden="true">🌟</span> Committed to growth, innovation, and meaningful
+                        collaborations.</li>
                 </ul>
             </div>
 
             <div class="profile-card">
                 <div class="profile-image">
-                    <img src="assets/images/profile_photo.png" alt="Profile Picture" />
+                    <img src="assets/images/profile_photo.png" alt="Pruthvi Patel Profile Picture" />
                 </div>
                 <h3>Pruthvi Patel</h3>
                 <p>App Developer | Tech Enthusiast</p>
-                <a href="assets/files/pruthvi_resume_2024.pdf" class="resume-button" target="_blank">
+                <a href="assets/files/pruthvi_resume_2024.pdf" class="resume-button" target="_blank" rel="noopener"
+                    aria-label="Download Pruthvi Patel's Resume (PDF)">
                     Download Resume
                 </a>
             </div>
@@ -135,58 +185,59 @@
 
             <!-- Skills Image -->
             <div class="skills-image">
-                <img src="assets/images/dev_skill.png" alt="Skills illustration">
+                <img src="assets/images/dev_skill.png" alt="Illustration showcasing software development skills"
+                    loading="lazy">
             </div>
         </div>
-        <div class="skills-container">
+        <div class="skills-container" aria-label="Technology Stack Grid">
             <div class="skill-card">
-                <img src="assets/skills/flutter.png" class="skill-icon">
+                <img src="assets/skills/flutter.png" alt="Flutter logo" class="skill-icon" loading="lazy">
                 <!-- <i class="fab fa-html5 skill-icon"></i> -->
                 <h3>Flutter</h3>
                 <p>Crafting pixel-perfect, cross-platform apps with stunning UIs.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/dart.png" class="skill-icon">
+                <img src="assets/skills/dart.png" alt="Dart logo" class="skill-icon" loading="lazy">
                 <h3>Dart</h3>
                 <p>Powering seamless and efficient app logic.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/firebase.png" class="skill-icon">
+                <img src="assets/skills/firebase.png" alt="Firebase logo" class="skill-icon" loading="lazy">
                 <h3>Firebase</h3>
                 <p>Building scalable, real-time backends with ease.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/bloc.png" class="skill-icon">
+                <img src="assets/skills/bloc.png" alt="BLoC pattern icon" class="skill-icon" loading="lazy">
                 <h3>BLoC</h3>
                 <p>Managing state elegantly for maintainable applications.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/vscode.png" class="skill-icon">
+                <img src="assets/skills/vscode.png" alt="VSCode logo" class="skill-icon" loading="lazy">
                 <h3>VS Code</h3>
                 <p>Maximizing productivity with a versatile and lightweight editor.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/android_studio.png" class="skill-icon">
+                <img src="assets/skills/android_studio.png" alt="Android Studio logo" class="skill-icon" loading="lazy">
                 <h3>Android Studio</h3>
                 <p>Optimizing native and cross-platform app development.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/cpp.png" class="skill-icon">
+                <img src="assets/skills/cpp.png" class="skill-icon" alt="C++ logo" class="skill-icon" loading="lazy">
                 <h3>C++</h3>
                 <p>Developing high-performance systems with precision.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/java.png" class="skill-icon">
+                <img src="assets/skills/java.png" alt="Java logo" class="skill-icon" loading="lazy">
                 <h3>Java</h3>
                 <p>Delivering robust and reliable solutions across platforms.</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/python.png" class="skill-icon">
+                <img src="assets/skills/python.png" alt="Python logo" class="skill-icon" loading="lazy">
                 <h3>Python</h3>
                 <p>Simplifying complex problems with expressive programming</p>
             </div>
             <div class="skill-card">
-                <img src="assets/skills/github.png" class="skill-icon">
+                <img src="assets/skills/github.png" alt="Github logo" class="skill-icon" loading="lazy">
                 <h3>Github</h3>
                 <p>Collaborating effectively with version control mastery.</p>
             </div>
@@ -200,129 +251,131 @@
             <!-- Loop through the project data -->
             <div class="project-card">
                 <div class="web-project-demo">
-                    <img src="assets/images/dev_folio.png" alt="Dev-Folio">
-                </div>
-                <div class="project-info">
-                    <h3>Dev-Folio</h3>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JS</p>
-                    <p style="color:#7e7d7d">Built a portfolio website using AI tools without web development expertise.
-                    </p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/PatelPruthvi/patelpruthvi.github.io" target="_blank" class="btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+                    <img src="assets/images/dev_folio.png" alt="Dev-Folio personal portfolio website">
                 </div>
             </div>
+            <div class="project-info">
+                <h3>Dev-Folio</h3>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JS</p>
+                <p style="color:#7e7d7d">Built a portfolio website using AI tools without web development expertise.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://github.com/PatelPruthvi/patelpruthvi.github.io" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/easy_dictionary/easy_dictionary_1.png" alt="App Demo Screen 1">
-                    <img src="assets/projects/easy_dictionary/easy_dictionary_2.png" alt="App Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Easy Dictionary</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, API, Provider, Firebase</p>
-                    <p style="color:#7e7d7d">🚀 Instantly find word meanings, synonyms, and pronunciations with Easy
-                        Dictionary! Enhance your vocabulary with our intuitive app. 🔍📖✨</p>
-                    <div class="project-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.pruthvi.easy_dictionary"
-                            target="_blank" class="btn play-btn">
-                            <i class="fab fa-google-play"></i><span class="button-label"> Google Play</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/easy_dictionary" target="_blank"
-                            class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+        <div class="project-card">
+            <div class="project-demo">
+                <img src="assets/projects/easy_dictionary/easy_dictionary_1.png" alt="Easy Dictionary App Interface">
+                <img src="assets/projects/easy_dictionary/easy_dictionary_2.png"
+                    alt="Word Meaning Screen - Easy Dictionary App">
+            </div>
+            <div class="project-info">
+                <h3>Easy Dictionary</h3>
+                <p><strong>Tech Stack:</strong> Flutter, API, Provider, Firebase</p>
+                <p style="color:#7e7d7d">🚀 Instantly find word meanings, synonyms, and pronunciations with Easy
+                    Dictionary! Enhance your vocabulary with our intuitive app. 🔍📖✨</p>
+                <div class="project-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.pruthvi.easy_dictionary" target="_blank"
+                        class="btn play-btn">
+                        <i class="fab fa-google-play"></i><span class="button-label"> Google Play</span>
+                    </a>
+                    <a href="https://github.com/PatelPruthvi/easy_dictionary" target="_blank" class="btn source-btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/task_planner/task_planner_a.png" alt="App Demo Screen 1">
-                    <img src="assets/projects/task_planner/task_planner_b.png" alt="App Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Task Planner</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, SQLite, BLoC</p>
-                    <p style="color:#7e7d7d">🚀 Stay on top of your tasks effortlessly with our intuitive task planner
-                        app! Organize,
-                        prioritize, and conquer your day with ease. 📅✅</p>
-                    <div class="project-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.agevole.taskplanner" target="_blank"
-                            class="btn play-btn">
-                            <i class="fab fa-google-play"></i><span class="button-label"> Google Play</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/task_planner" target="_blank" class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+        <div class="project-card">
+            <div class="project-demo">
+                <img src="assets/projects/task_planner/task_planner_a.png" alt="Task Planner Flutter App UI">
+                <img src="assets/projects/task_planner/task_planner_b.png" alt="Organize tasks - Task Planner App">
+            </div>
+            <div class="project-info">
+                <h3>Task Planner</h3>
+                <p><strong>Tech Stack:</strong> Flutter, SQLite, BLoC</p>
+                <p style="color:#7e7d7d">🚀 Stay on top of your tasks effortlessly with our intuitive task planner
+                    app! Organize,
+                    prioritize, and conquer your day with ease. 📅✅</p>
+                <div class="project-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.agevole.taskplanner" target="_blank"
+                        class="btn play-btn">
+                        <i class="fab fa-google-play"></i><span class="button-label"> Google Play</span>
+                    </a>
+                    <a href="https://github.com/PatelPruthvi/task_planner" target="_blank" class="btn source-btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/interactify/interactify_t.png" alt="App Demo Screen 1">
-                    <img src="assets/projects/interactify/interactify_2.png" alt="App Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Interactify</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, Cloud Firestore, BLoC</p>
-                    <p style="color:#7e7d7d">Capture, share, and connect with the world. Visual stories, one's way. 📸🌍
-                        #InstaClone</p>
-                    <div class="project-buttons">
-                        <a href="assets/projects/interactify/interactify.apk" download class="btn apk-btn">
-                            <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/interactify" target="_blank" class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+        <div class="project-card">
+            <div class="project-demo">
+                <img src="assets/projects/interactify/interactify_t.png" alt="Interactify Social App Feed Screen">
+                <img src="assets/projects/interactify/interactify_2.png" alt="Photo Sharing Feature in Interactify App">
+            </div>
+            <div class="project-info">
+                <h3>Interactify</h3>
+                <p><strong>Tech Stack:</strong> Flutter, Cloud Firestore, BLoC</p>
+                <p style="color:#7e7d7d">Capture, share, and connect with the world. Visual stories, one's way. 📸🌍
+                    #InstaClone</p>
+                <div class="project-buttons">
+                    <a href="assets/projects/interactify/interactify.apk" download class="btn apk-btn">
+                        <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
+                    </a>
+                    <a href="https://github.com/PatelPruthvi/interactify" target="_blank" class="btn source-btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/book_bucket/book_bucket.png" alt="App Demo Screen 1">
-                    <img src="assets/projects/book_bucket/book_bucket_2.png" alt="App Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Book Bucket</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
-                    <p style="color:#7e7d7d">Dive into a world of literature. Organize, discover, and embrace the
-                        reading journey with Book Bucket.</p>
-                    <div class="project-buttons">
-                        <a href="assets/projects/book_bucket/book-bucket.apk" download class="btn apk-btn">
-                            <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/book-Bucket-" target="_blank" class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+        <div class="project-card">
+            <div class="project-demo">
+                <img src="assets/projects/book_bucket/book_bucket.png" alt="Book Bucket Home Screen">
+                <img src="assets/projects/book_bucket/book_bucket_2.png" alt="Book Collection in Book Bucket App">
+            </div>
+            <div class="project-info">
+                <h3>Book Bucket</h3>
+                <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+                <p style="color:#7e7d7d">Dive into a world of literature. Organize, discover, and embrace the
+                    reading journey with Book Bucket.</p>
+                <div class="project-buttons">
+                    <a href="assets/projects/book_bucket/book-bucket.apk" download class="btn apk-btn">
+                        <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
+                    </a>
+                    <a href="https://github.com/PatelPruthvi/book-Bucket-" target="_blank" class="btn source-btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-demo">
-                    <img src="assets/projects/grocery_app/grocery_app.png" alt="Grocery App Demo Screen 1">
-                    <img src="assets/projects/grocery_app/grocery_app_2.png" alt="Grocery App Demo Screen 2">
-                </div>
-                <div class="project-info">
-                    <h3>Grocery App</h3>
-                    <p><strong>Tech Stack:</strong> Flutter, BLoC</p>
-                    <p style="color:#7e7d7d">Mastering BLoC concepts one cart at a time. Explore the grocery app journey
-                        in 3 pages. 🛒📚</p>
-                    <div class="project-buttons">
-                        <a href="assets/projects/grocery_app/grocery_app.apk" download class="btn apk-btn">
-                            <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
-                        </a>
-                        <a href="https://github.com/PatelPruthvi/grocery_app_bloc" target="_blank"
-                            class="btn source-btn">
-                            <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
-                        </a>
-                    </div>
+        </div>
+        <div class="project-card">
+            <div class="project-demo">
+                <img src="assets/projects/grocery_app/grocery_app.png" alt="Grocery Shopping App UI">
+                <img src="assets/projects/grocery_app/grocery_app_2.png"
+                    alt="Shopping Cart and Product List - Grocery App">
+
+            </div>
+            <div class="project-info">
+                <h3>Grocery App</h3>
+                <p><strong>Tech Stack:</strong> Flutter, BLoC</p>
+                <p style="color:#7e7d7d">Mastering BLoC concepts one cart at a time. Explore the grocery app journey
+                    in 3 pages. 🛒📚</p>
+                <div class="project-buttons">
+                    <a href="assets/projects/grocery_app/grocery_app.apk" download class="btn apk-btn">
+                        <i class="fa fa-download"></i> <span class="button-label">Download APK</span>
+                    </a>
+                    <a href="https://github.com/PatelPruthvi/grocery_app_bloc" target="_blank" class="btn source-btn">
+                        <i class="fab fa-github"></i> <span class="button-label">Source Code</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
 
         </div>
@@ -335,26 +388,27 @@
         <div class="contact-container">
             <!-- Form Section -->
             <div class="form-container">
-                <form id="contactForm">
+                <form id="contactForm" name="contact" method="POST" aria-label="Contact form to reach out">
                     <div class="form-group">
                         <input type="text" id="name" placeholder="Enter Your Name" class="form-input" required
-                            data-error>
+                            data-error required aria-required="true">
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" placeholder="Enter Your E-mail" class="form-input" required
-                            data-error="Email cannot be empty.">
+                            data-error="Email cannot be empty." required aria-required="true"
+                            aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <textarea id="message" rows="6" placeholder="Enter Your Message" class="form-input" required
                             data-error></textarea>
 
                     </div>
-                    <button type="submit" id="sendMessage">Send</button>
+                    <button type="submit" id="sendMessage" aria-label="Send Message">Send</button>
                 </form>
             </div>
 
             <!-- Divider -->
-            <div class="divider"></div>
+            <div class="divider" role="separator" aria-hidden="true"></div>
 
             <!-- Info Section -->
             <div class="info-container">
@@ -363,26 +417,31 @@
                     I'd love to hear from you.
                 </p>
                 <p>
-                    <a href="mailto:pruthvikp8613@gmail.com"><i class="far fa-envelope"></i> pruthvikp8613@gmail.com</a>
+                    <a href="mailto:pruthvikp8613@gmail.com" aria-label="Email Pruthvi Patel"><i
+                            class="far fa-envelope"></i> pruthvikp8613@gmail.com</a>
                 </p>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <hr style="border: 1px solid #ccc; width: 100%; margin: 20px 0;">
+    <footer class="footer" role="contentinfo">
+        <hr style="border: 1px solid #ccc; width: 100%; margin: 20px 0;" aria-hidden="true">
         <div class="footer-content">
             <div style="text-align: center;">
 
-                <a href="https://leetcode.com/u/pruthvikp8613" class="footer-icon" target="_blank">
+                <a href="https://leetcode.com/u/pruthvikp8613" class="footer-icon" target="_blank" rel="noopener"
+                    aria-label="LeetCode profile of Pruthvi Patel">
                     <i class="fas fa-code"></i>
                 </a>
-                <a href="https://x.com/_patelpruthvi_" class="footer-icon" target="_blank">
+                <a href="https://x.com/_patelpruthvi_" class="footer-icon" target="_blank" rel="noopener"
+                    aria-label="Twitter profile of Pruthvi Patel">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://linkedin.com/in/-patelpruthvi-" class="footer-icon" target="_blank">
+                <a href="https://linkedin.com/in/-patelpruthvi-" class="footer-icon" target="_blank" rel="noopener"
+                    aria-label="LinkedIn profile of Pruthvi Patel">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/PatelPruthvi" class="footer-icon" target="_blank">
+                <a href="https://github.com/PatelPruthvi" class="footer-icon" target="_blank" rel="noopener"
+                    aria-label="Github profile of Pruthvi Patel">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
